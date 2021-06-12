@@ -24,10 +24,22 @@
             <artifactId>fastjson</artifactId>
             <version>1.2.41</version>
         </dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>1.7.30</version>
+        </dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-simple</artifactId>
+            <version>1.7.25</version>
+        </dependency>
     </dependencies>
     <modules>
         <module>rpc-client</module>
         <module>rpc-server</module>
+        <module>rpc-client-1</module>
+        <module>rpc-server-1</module>
     </modules>
 
 </project>

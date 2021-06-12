@@ -32,8 +32,7 @@ public class ProcessorHandler implements Runnable{
             RpcRequest rpcRequest = JSON.parseObject(json.toString(), RpcRequest.class);
 
             Object result = invoke(rpcRequest);
-            String to = JSON.toJSONString(result);
-            printWriter.println(JSON.toJSONString(to));
+            printWriter.println(JSON.toJSONString(result));
             printWriter.flush();
 
         } catch (IOException e) {

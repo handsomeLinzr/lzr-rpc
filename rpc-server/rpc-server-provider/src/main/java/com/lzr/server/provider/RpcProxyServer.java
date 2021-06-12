@@ -27,6 +27,7 @@ public class RpcProxyServer {
 
         map = new ConcurrentHashMap<>(16);
         map.put("IHelloService", new HelloServiceImpl());
+        map.put("IUserService", new UserServiceImpl());
     }
 
     /**
@@ -39,7 +40,6 @@ public class RpcProxyServer {
 
             while (true) {
                 Socket socket = serverSocket.accept();
-                System.out.println("请求进入");
                 // 将请求抛给线程池
                 threadPool.execute(new ProcessorHandler(socket, map));
             }
